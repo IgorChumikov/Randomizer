@@ -11,6 +11,18 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     var window: UIWindow?
 
+    func application(_ application: UIApplication, continue userActivity: NSUserActivity, restorationHandler: @escaping ([UIUserActivityRestoring]?) -> Void) -> Bool {
+        switch userActivity.activityType {
+        case UserActivityType.generateNumberRandom.rawValue:
+            if let viewController = window?.rootViewController as? ViewController {
+                viewController.randomNumberGenerate()
+            }
+        default:
+            break
+        }
+        
+        return true
+    }
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         // Use this method to optionally configure and attach the UIWindow `window` to the provided UIWindowScene `scene`.

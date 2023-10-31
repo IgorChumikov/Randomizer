@@ -9,8 +9,20 @@ import UIKit
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
-
-
+    
+    // FOX
+//    func application(_ application: UIApplication, continue userActivity: NSUserActivity, restorationHandler: @escaping ([UIUserActivityRestoring]?) -> Void) -> Bool {
+//        switch userActivity.activityType {
+//        case UserActivityType.generateNumberRandom.rawValue:
+//            if let viewController = window.rootViewController as? ViewController {
+//                viewController.randomNumberGenerate()
+//            }
+//        default:
+//            break
+//        }
+//        
+//        return true
+//    }
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
